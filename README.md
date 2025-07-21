@@ -1,32 +1,13 @@
 # 🧠 Inteligencia-Artificial-Videojuegos
 
 **Repositorio de la asignatura de Inteligencia Artificial del Grado en Diseño y Desarrollo de Videojuegos.**  
-Incluye los apuntes de clase y las dos prácticas realizadas durante el curso, junto con sus respectivas memorias explicativas.
+Incluye los apuntes de clase y la práctica del segundo bloque realizados durante el curso, también se incluye su respectiva memoria explicativa.
 
 ---
 
 ## Resumen del temario
 
-La asignatura se ha dividido en dos bloques temáticos:
-
-### 🔹 Bloque I – Fundamentos y búsqueda
-
-1. **Introducción a la Inteligencia Artificial**  
-   Definición, objetivos y principales disciplinas. Aplicaciones en videojuegos.
-
-2. **Agentes inteligentes y entornos**  
-   Tipos de agentes, autonomía, racionalidad y modelado de entornos en videojuegos.
-
-3. **Búsqueda no informada**  
-   Algoritmos como búsqueda en amplitud y búsqueda de coste uniforme.
-
-4. **Búsqueda con heurísticas**  
-   Uso de funciones heurísticas (A*, búsqueda local, hill climbing, búsqueda por horizonte, etc.).
-
-5. **Búsqueda multiagente**  
-   Estrategias para juegos con más de un agente o jugador.
-
----
+La asignatura se ha dividido en dos bloques de temario. A continuación, se desglosa el contenido del segundo bloque:
 
 ### 🔹 Bloque II – Aprendizaje automático y técnicas avanzadas
 
@@ -47,10 +28,37 @@ La asignatura se ha dividido en dos bloques temáticos:
 
 ---
 
-## Prácticas
+## Práctica Bloque II
 
-Este repositorio contiene las dos prácticas desarrolladas durante la asignatura.
+Este repositorio contiene la segunda práctica desarrollada durante la asignatura.
 
-Para una mejor comprensión de las implementaciones, se recomienda consultar las **memorias explicativas** disponibles en PDF
+Para una mejor comprensión de la implementación, se recomienda consultar la **memoria explicativa** disponible en PDF.
+
+---
+
+## 📋 Enunciado original de la Práctica 2
+
+**Práctica 2: Machine Learning** se centró en implementar un agente inteligente que aprende a través de técnicas de aprendizaje por refuerzo, específicamente **Q-Learning**, dentro de un entorno virtual desarrollado con Unity™.
+
+El objetivo principal era entrenar al agente (`Agent`) para **escapar de un oponente** (`Player`) que se desplaza hacia él usando A*. El entrenamiento se realiza en una escena específica (`TrainPlayGround`aunque creé escenarios extra en los que evaluar) mediante una implementación personalizada de la interfaz `IQMindTrainer`. El comportamiento aprendido se evalúa en una segunda escena (`TestPlayGround` aunque personalmente desarrollé escenarios diferentes en los que entrenar) con condiciones aleatorias.
+
+### Objetivos específicos:
+
+- **Entrenamiento del agente**  
+  Programar desde cero un sistema de entrenamiento basado en Q-Learning que:
+  - Genere una tabla Q en formato `.csv`.
+  - Se pueda regenerar y validar automáticamente.
+  - Enseñe al agente a evitar ser atrapado.
+
+- **Evaluación del comportamiento aprendido**  
+  Medir el número promedio de pasos que el agente puede moverse sin ser atrapado por el oponente, en 10 ejecuciones de prueba. La nota final depende de este promedio:
+
+  | Promedio de pasos | Calificación |
+  |--------------------|--------------|
+  | 250–1000           | 6            |
+  | 1000–5000          | 8            |
+  | > 5000             | 10           |
+
+La nota obtenida fue de `9/10`
 
 ---
